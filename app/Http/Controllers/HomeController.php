@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use App\MainImage;
+use App\User;
 use Carbon\Carbon;
 use App\ContactDetail;
 use App\Customer;
@@ -28,7 +29,7 @@ class HomeController extends Controller
         $start_date = Carbon::now()->subDays(30);
         $end_date = Carbon::now();
         $period = CarbonPeriod::create($start_date, $end_date);
-        $users = Customer::whereBetween('created_at', [$start_date->toDateTimeString(), $end_date->toDateTimeString()])->get();
+        $users = User::whereBetween('created_at', [$start_date->toDateTimeString(), $end_date->toDateTimeString()])->get();
         $date_array = [];
         $count_array = [];
 

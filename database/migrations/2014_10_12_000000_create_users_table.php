@@ -17,12 +17,20 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('contact_no')->nullable();
+            $table->string('address')->nullable();
+            $table->double('balance')->nullable();
             $table->string('password');
+            $table->string('status')->default('active');
+            $table->tinyInteger('is_admin')->default('0');
+            $table->nestedSet();
             $table->rememberToken();
             $table->timestamps();
         });
+
     }
+
+
 
     /**
      * Reverse the migrations.
@@ -32,5 +40,10 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->dropNestedSet();
+        // });
+
     }
 }

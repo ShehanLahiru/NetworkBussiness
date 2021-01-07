@@ -54,7 +54,7 @@
                     <div class="row align-items-center">
                         <div class="col-2">
                             <div class="image-logo">
-                                <img width="70px" height="70px" src="images/logo.png" alt="Image">
+                                <img width="70px" height="70px" src="images/logo.jpeg" alt="Image">
                             </div>
                         </div>
                         <div class="col-10">
@@ -66,9 +66,10 @@
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                                         <li><a active href={{ route('home') }}>Home</>
                                         </li>
-                                        <li><a href="#">Projects</a></li>
                                         <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href={{ route('contact-us') }}>Contact Us</a></li>
+                                        <li><a href="{{ route('backend.login') }}">Login</a></li>
+                                        <li><a href="{{ route('backend.login') }}">Register</a></li>
                                     </ul>
                                 </div>
                             </nav>

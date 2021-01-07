@@ -191,7 +191,7 @@ a {
     background: #f23a2e; }
 
 .site-footer {
-  background-color:darkcyan;
+  background-color:black;
   font-weight: bold;
   color: white ;
   font-weight: bold;
@@ -269,7 +269,7 @@ a {
 
   .site-navbar-top{
     /* background: url(../images/topbag5.jpeg); */
-    padding: 20px;
+    /* padding: 20px;
     background-position: bottom;
     background-size: cover;
     background-color: darkcyan;
@@ -277,7 +277,7 @@ a {
     width: auto;
     height: auto;
     position: relative;
-    z-index: 20;
+    z-index: 20; */
   }
 
 .site-navbar-top, .site-navbar {
@@ -761,12 +761,31 @@ a {
 .post-entry {
     position: relative;
     overflow: hidden;
-    border: 3px solid darkcyan;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    border: 5px solid #fbc834;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
     border-radius: 40px;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.9);
 }
+
+.post-entry-main {
+    position: relative;
+    overflow: hidden;
+    border: 1px  white;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 1px;
+    background: rgba(0,0,0,.5);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
 
 
   .post-entry, .post-entry .text {
