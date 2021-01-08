@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Solid Water Systems (Pvt) Ltd </title>
+    <title>Network Bussiness </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,10 +22,9 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-     <meta name="title" content="Solid water systems (pvt) Ltd">
-     <meta name="description" content=" Solid Water Systems is Sri Lanka's one of the premier water treatment providers.
-     We can maintain any kind of wastewater treatment plant and We provide full services to any type of reverse osmosis plant.">
-     <meta name="keywords" content="solid water systems,waste water treatment,reverse osmosis plant,water treatment plant">
+     <meta name="title" content="Network Bussiness">
+     <meta name="description" content=" Network Bussiness.">
+     <meta name="keywords" content="Network Bussiness">
 </head>
 
 <body>
@@ -68,8 +67,22 @@
                                         </li>
                                         <li><a href="#">About Us</a></li>
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
-                                        <li><a href="{{ route('backend.login') }}">Login</a></li>
-                                        <li><a href="{{ route('backend.login') }}">Register</a></li>
+                                        @if (!Auth::check())
+                                            <li><a href="{{ route('backend.login') }}">Login</a></li>
+                                            <li><a href="{{ route('backend.login') }}">Register</a></li>
+
+                                        @else
+                                        <li><a href="{{ route('profile') }}">Profile</a></li>
+                                        <li><a href="{{ route('backend.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                            Logout
+                                        </a></li>
+
+                                        {{-- <form id="frm-logout" action="{{ route('backend.logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form> --}}
+
+                                        @endif
+
                                     </ul>
                                 </div>
                             </nav>

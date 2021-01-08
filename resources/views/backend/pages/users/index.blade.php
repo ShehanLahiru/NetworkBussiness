@@ -37,14 +37,22 @@
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->balance }}</td>
                                     <td>
-                                        <a href="{{ route('backend.users.edit',$user->id) }}">
-                                            <button class="btn btn-default">Edit</button>
+                                        <a href="{{ route('view',$user->id) }}">
+                                            <button class="btn btn-default">View</button>
                                         </a>
+                                        @if($user->status == "active")
                                         <form method="post" action="{{ route('backend.users.destroy',$user->id) }}">
                                             @csrf
                                             @method('delete')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                            <button class="btn btn-danger" type="submit">Deactive</button>
                                         </form>
+                                        @else
+                                        <form method="post" action="{{ route('backend.users.destroy',$user->id) }}">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-danger" type="submit">Active</button>
+                                        </form>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

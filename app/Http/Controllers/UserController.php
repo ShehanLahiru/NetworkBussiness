@@ -6,13 +6,15 @@ use App\User;
 use App\ContactDetail;
 use App\Helpers\APIHelper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
 
     public function profile()
     {
-        return view('profile.index');
+        $user = User::find(Auth::id());
+        return view('profile.index', ["user" => $user]);
     }
     public function index(){
 
@@ -104,5 +106,11 @@ class UserController extends Controller
         } else {
             return redirect()->route('backend.users.index')->with(session()->flash('error', 'Something went wrong!'));
         }
+    }
+
+    public function view($id)
+    {
+        $user = User::find($id);
+        return redirect()->route('profile',["user" => $user]);
     }
 }

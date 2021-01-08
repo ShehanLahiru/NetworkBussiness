@@ -13,15 +13,19 @@
 
 
 
-Route::get('/backend', 'Auth\LoginController@showLoginForm')->name('backend.login');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('backend.login');
 Route::post('/dashboard', 'Auth\LoginController@login')->name('backend.login.submit');
-Route::post('logout', 'Auth\LoginController@logout')->name('backend.logout');
+Route::post('/', 'Auth\LoginController@logout')->name('backend.logout');
+
 
 Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/dashboard', 'HomeController@index')->name('backend.dashboard');
 
 Route::resource('users', 'UserController', ['as' => 'backend']);
+
+Route::get('/view/{id}', 'UserController@view')->name('view');
+
 
 // Route::resource('projects', 'ProjectController', ['as' => 'backend']);
 

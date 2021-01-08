@@ -1,6 +1,6 @@
 @include('frontend.layouts.head')
 
-<div class="site-blocks-cover overlay" style="background-image: url(images/main.jpeg);" data-aos="fade"
+<div class="site-blocks-cover overlay" style="background-image: url(images/main1.jpg);" data-aos="fade"
     data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row align-items-center text-center image-details">
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-    <div class="site-section" style="background-image: url(images/main.jpeg); margin-top:160px;background-size: cover;
+    <div class="site-section" style="background-image: url(images/main2.jpeg); margin-top:160px;background-size: cover;
     background-repeat: no-repeat;">
         <div class="container">
             <div class="col-md-12 col-lg-12 mb-12">
@@ -41,12 +41,13 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/main.jpeg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">fwkjhfjhjghjhjkhgj</h2>
-                        <h5 class="text-details">kfjwdjjhjgjjjkj
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
+                        <h2 class="h2 text-main">Watch videos</h2>
+                        <h5 class="text-details">
+                            <p class="mb-0"><a href="#" class=""><small
+                                        class="text-uppercase font-weight-bold ">Read
                                         More</small></a></p>
                         </h5>
                     </div>
@@ -55,12 +56,13 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/main.jpeg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">fwkjhfjhjghjhjkhgj</h2>
-                        <h5 class="text-details">kfjwdjjhjgjjjkj
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
+                        <h2 class="h2 text-main">Marketing</h2>
+                        <h5 class="text-details">
+                            <p class="mb-0"><a href="#" class=""><small
+                                        class="text-uppercase font-weight-bold ">Read
                                         More</small></a></p>
                         </h5>
                     </div>
@@ -69,12 +71,13 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/main.jpeg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">fwkjhfjhjghjhjkhgj</h2>
-                        <h5 class="text-details">kfjwdjjhjgjjjkj
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
+                        <h2 class="h2 text-main">Products</h2>
+                        <h5 class="text-details">
+                            <p class="mb-0"><a href="#" class=""><small
+                                        class="text-uppercase font-weight-bold ">Read
                                         More</small></a></p>
                         </h5>
                     </div>
@@ -83,12 +86,13 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/main.jpeg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">fwkjhfjhjghjhjkhgj</h2>
-                        <h5 class="text-details">kfjwdjjhjgjjjkj
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
+                        <h2 class="h2 text-main">Bill Payments and Loan</h2>
+                        <h5 class="text-details">
+                            <p class="mb-0"><a href="#" class=""><small
+                                        class="text-uppercase font-weight-bold ">Read
                                         More</small></a></p>
                         </h5>
                     </div>

@@ -25,7 +25,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    public function redirectPath()
+    {
+        if (\Auth::user()->is_admin== '1') {
+            return "/dashboard";
+            // or return route('routename');
+        }
+
+        return "/profile";
+        // or return route('routename');
+    }
 
     /**
      * Create a new controller instance.
@@ -42,7 +52,7 @@ class LoginController extends Controller
         return view('backend.auth.login');
     }
     protected function loggedOut(Request $request) {
-        return view('backend.auth.login');
+        return view('frontend.page.home');
     }
 }
 

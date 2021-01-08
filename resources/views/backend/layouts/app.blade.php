@@ -35,7 +35,7 @@
 
     <!--  Social tags      -->
     <meta name="keywords" content="">
-    <meta name="description" content="Solid Water Systems">
+    <meta name="description" content="Network Bussiness">
     <meta itemprop="image" content="{{ asset('images/logo.jpg') }}">
 
 
@@ -57,7 +57,7 @@
     <meta property="og:image" content="{{  asset('images/logo.jpg') }}"/>
     <meta property="og:description"
           content="  Solid Water Systems"/>
-    <meta property="og:site_name" content=" Solid Water Systems"/>
+    <meta property="og:site_name" content="Network Bussiness"/>
     <title>
        Solid Water Systems
     </title>
