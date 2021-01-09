@@ -1,18 +1,8 @@
 @include('frontend.layouts.head')
-<div class="site-blocks-cover inner-page overlay" style="background-image: url(images/img_4_colored.jpg);"
-    data-aos="fade" data-stellar-background-ratio="0.5">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 text-center">
-                <h1 class="mb-5">Get In Touch</h1>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="panel-header panel-header-sm">
     @include('backend.alerts.success')
 </div>
-<div class="site-section" style="background-image: url(images/application-water-treatment.jpg);background-size: cover;
+<div class="site-section" style="background-image: url(images/main1.jpg);background-size: cover;
 background-repeat: no-repeat;">
     <div class="container">
         <div class="row">

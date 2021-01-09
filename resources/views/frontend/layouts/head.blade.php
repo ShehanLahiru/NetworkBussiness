@@ -65,7 +65,7 @@
                                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                                         <li><a active href={{ route('home') }}>Home</>
                                         </li>
-                                        <li><a href="#">About Us</a></li>
+                                        <li><a href={{ route('about-us') }}>About Us</a></li>
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
                                         @if (!Auth::check())
                                             <li><a href="{{ route('backend.login') }}">Login</a></li>
@@ -77,9 +77,9 @@
                                             Logout
                                         </a></li>
 
-                                        {{-- <form id="frm-logout" action="{{ route('backend.logout') }}" method="POST" style="display: none;">
+                                        <form id="frm-logout" action="{{ route('backend.logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
-                                        </form> --}}
+                                        </form>
 
                                         @endif
 

@@ -42,6 +42,7 @@ Route::get('/view/{id}', 'UserController@view')->name('view');
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/profile', 'UserController@profile')->name('profile');
 Route::get('/contact_us', 'ContactDetailController@contactDetails')->name('contact-us');
+ Route::get('/about_us', 'ContactDetailController@aboutus')->name('about-us');
 // Route::get('/project', 'ProjectController@project')->name('project');
 // Route::get('/project', 'ProjectController@project')->name('project');
 // Route::get('/{category}', 'ProjectController@projectCategory')->name('projectCategory');

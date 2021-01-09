@@ -41,6 +41,11 @@ a {
     font-weight: 700;
     color:darkcyan;
  }
+ .text-main-products{
+    font-size: 15px;
+    font-weight: 700;
+    color:darkcyan;
+ }
  .text-heading-image{
     font-size: 30px;
     font-weight: 900;
@@ -771,20 +776,18 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.post-entry-main {
+.post-entry-products {
     position: relative;
     overflow: hidden;
-    border: 1px  white;
+    border: 3px solid #fbc834;
     margin-right: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
     margin-top: 50px;
-    border-radius: 1px;
-    background: rgba(0,0,0,.5);
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    -ms-border-radius: 1px;
-    -o-border-radius: 1px;
+    border-radius: 40px;
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
 }
 
 

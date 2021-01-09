@@ -13,6 +13,10 @@ class ContactDetailController extends Controller
 
         return view('frontend/page/contact_us');
     }
+    public function aboutus(){
+
+        return view('frontend/page/about_us');
+    }
 
     public function storeMessage(Request $request)
     {
