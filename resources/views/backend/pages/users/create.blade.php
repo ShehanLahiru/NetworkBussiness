@@ -45,15 +45,6 @@
                         <div class="row">
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
-                                    <label for="balance">{{__("Balance")}}</label>
-                                    <input type="text" name="balance" class="form-control" value="{{ old('balance') }}">
-                                    @include('backend.alerts.feedback', ['field' => 'balance'])
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-7 pr-1">
-                                <div class="form-group">
                                     <label for="parent_id">{{__("parent_id")}}</label>
                                     <input type="text" name="parent_id" class="form-control" value="{{ old('parent_id') }}">
                                     @include('backend.alerts.feedback', ['field' => 'parent_id'])

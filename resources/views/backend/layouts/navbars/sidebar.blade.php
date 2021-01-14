@@ -21,6 +21,24 @@
                     <p>{{ __('USERS') }}</p>
                 </a>
             </li>
+            <li class="@if ($activePage == 'accounts') active @endif">
+                <a href="{{ route('accounts') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Account Summery') }}</p>
+                </a>
+            </li>
+            <li class="@if ($activePage == 'marketings') active @endif">
+                <a href="{{ route('account.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Marketing') }}</p>
+                </a>
+            </li>
+            <li class="@if ($activePage == 'withdraws') active @endif">
+                <a href="{{ route('withdraw.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('withdraw') }}</p>
+                </a>
+            </li>
             {{-- <li class="@if ($activePage == 'projects') active @endif">
                 <a href="{{ route('backend.projects.index') }}">
                     <i class="fas fa-user"></i>

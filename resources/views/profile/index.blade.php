@@ -28,6 +28,80 @@
                                 <button type="submit" class="btn btn-primary btn-round float-left">{{__('Edit Profile')}}</button>
                             </div>
                         </form>
+                        <button type="button" class="btn btn-primary float-lg-right" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Withdraw
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Withdraw your balance</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <form method="post" action="{{ route('withdraw.store') }}"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="modal-body">
+                                        @include('backend.alerts.success')
+                                        <div class="row">
+                                            <div class="col-md-7 pr-1">
+                                                <div class="form-group">
+                                                    <label for="name">{{__("Name")}}</label>
+                                                    <input type="text" name="name" class="form-control"
+                                                        value="{{ old('name') }}">
+                                                    @include('backend.alerts.feedback', ['field' => 'name'])
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 pr-1">
+                                                <div class="form-group">
+                                                    <label for="acc_no">{{__("Account Number")}}</label>
+                                                    <input type="text" name="acc_no" class="form-control"
+                                                        value="{{ old('acc_no') }}">
+                                                    @include('backend.alerts.feedback', ['field' => 'acc_no'])
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 pr-1">
+                                                <div class="form-group">
+                                                    <label for="branch">{{__("Branch")}}</label>
+                                                    <input type="text" name="branch" class="form-control"
+                                                        value="{{ old('branch') }}">
+                                                    @include('backend.alerts.feedback', ['field' => 'branch'])
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 pr-1">
+                                                <div class="form-group">
+                                                    <label for="amount">{{__("Amount")}}</label>
+                                                    <input type="text" name="amount" class="form-control"
+                                                        value="{{ old('amount') }}">
+                                                    @include('backend.alerts.feedback', ['field' => 'amount'])
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="card-footer ">
+                                        <button type="submit"
+                                            class="btn btn-primary float-right btn-round">{{__('Create')}}</button>
+                                    </div> --}}
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                     <hr>
                 </div>
@@ -36,6 +110,7 @@
                 <div class="card">
                     <div class="card-header" style="background:rgba(165, 194, 223); border-radius: 3px; height:70px;border: 3px  white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
                         <h5 class="title">{{$user->name}}</h5>
+                        <h5 class="title">{{$user->id}}</h5>
                     </div>
                     <div class="card-body">
                         <div class="site-section" style="background-color: rgba(255,255,255);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -123,6 +198,10 @@
             })
         });
     </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
 {{-- @include('frontend.layouts.footer') --}}
 

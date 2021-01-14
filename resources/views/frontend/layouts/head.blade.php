@@ -25,6 +25,7 @@
      <meta name="title" content="Network Bussiness">
      <meta name="description" content=" Network Bussiness.">
      <meta name="keywords" content="Network Bussiness">
+
 </head>
 
 <body>
@@ -68,8 +69,8 @@
                                         <li><a href={{ route('about-us') }}>About Us</a></li>
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
                                         @if (!Auth::check())
-                                            <li><a href="{{ route('backend.login') }}">Login</a></li>
-                                            <li><a href="{{ route('backend.login') }}">Register</a></li>
+                                            <li><a href="{{ route('backend.login') }}"style="background:green;border-radius: 20px; font-weight: 1000;">Login</a></li>
+                                            <li><a href="{{ route('backend.login') }}"style="background:#2184AB ;border-radius: 10px; font-weight: 1000;">Register</a></li>
 
                                         @else
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
@@ -104,6 +105,7 @@
         <script src="js/aos.js"></script>
 
         <script src="js/main.js"></script>
+        
         <script>
             jQuery(function($) {
                 var path = window.location.href; // because the 'href' property of the DOM element is the absolute path

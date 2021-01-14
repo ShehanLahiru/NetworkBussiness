@@ -1,7 +1,7 @@
 @include('frontend.layouts.head')
 
 <div class="slide-one-item home-slider owl-carousel">
-    <div class="site-blocks-cover overlay" style="background-image: url(images/main1.jpg);" data-aos="fade"
+    <div class="site-blocks-cover overlay" style="background-image: url(images/main6.jpg);" data-aos="fade"
         data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center text-center image-details">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="site-blocks-cover overlay" style="background-image: url(images/main1.jpg);" data-aos="fade"
+    <div class="site-blocks-cover overlay" style="background-image: url(images/main7.jpg);" data-aos="fade"
         data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center text-center image-details">
@@ -125,7 +125,7 @@
     </div>
 </div>
 
-<div class="site-section" style="background-image: url(images/main2.jpeg); margin-top:1px;background-size: cover;
+<div class="site-section" style="background-image: url(images/main12.jpg); margin-top:1px;background-size: cover;
     background-repeat: no-repeat;">
     <div class="container">
         <div class="col-md-12 col-lg-12 mb-12">
@@ -133,19 +133,19 @@
                 <div class="text p-4">
                     <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2>
+                       </h2><br>
                        <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2>
+                       </h2><br>
                        <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2>
+                       </h2><br>
                        <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2>
+                       </h2><br>
                        <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2>
+                       </h2><br>
                 </div>
             </div>
         </div>

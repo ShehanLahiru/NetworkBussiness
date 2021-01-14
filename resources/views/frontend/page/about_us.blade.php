@@ -1,5 +1,5 @@
 @include('frontend.layouts.head')
-<div class="site-section" style="background-image: url(images/main2.jpeg);background-size: cover;
+<div class="site-section" style="background-image: url(images/main11.jpeg);background-size: cover;
     background-repeat: no-repeat;">
     <div class="container">
         <div class="col-md-12 col-lg-12 mb-12">
