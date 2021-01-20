@@ -24,6 +24,7 @@
                         <table class="table">
                             <thead class=" text-primary">
                                 <th>ID</th>
+                                <th>User ID</th>
                                 <th>Name</th>
                                 <th>Amount</th>
                                 <th>Account_No</th>
@@ -35,6 +36,7 @@
                                 @foreach($withdraws as $withdraw)
                                 <tr>
                                     <td>{{ $withdraw->id }}</td>
+                                    <td>{{ $withdraw->user_id }}</td>
                                     <td>{{ $withdraw->name }}</td>
                                     <td>{{ $withdraw->amount }}</td>
                                     <td>{{ $withdraw->status }}</td>

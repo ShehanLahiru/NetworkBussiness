@@ -13,7 +13,7 @@ background-repeat: no-repeat;">
                         <h4 class="card-title" style="color: white"> Enter Your Message Here</h4>
                     </div>
                     <div class="card-body">
-                        <form id="riddle_create" method="post" action=""
+                        <form id="riddle_create" method="post" action="{{ route('storeMessage') }}"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row">

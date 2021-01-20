@@ -18,6 +18,8 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 1,
                 'name' => 'Shehan',
+                'username' => 'Shehan',
+                'is_admin' => '1',
                 'email' => 'info@solidwatersystems.com',
                 'password' => bcrypt('sws123'),
                 'created_at' => '2020-03-05 00:00:00',
@@ -27,6 +29,8 @@ class UsersTableSeeder extends Seeder
             array(
                 'id' => 2,
                 'name' => 'Shehan',
+                'username' => 'Shehan1',
+                'is_admin' => '0',
                 'email' => 'viraj@solidwatersystems.com',
                 'password' => bcrypt('sws123'),
                 'created_at' => '2020-03-05 00:00:00',

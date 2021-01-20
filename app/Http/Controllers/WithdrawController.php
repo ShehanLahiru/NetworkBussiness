@@ -23,8 +23,6 @@ class WithdrawController extends Controller
         $withdraw->amount = $request->input("amount");
         $withdraw->status = "pending";
 
-
-
         $result = $withdraw->save();
         if ($result) {
             return redirect()->route('marketing')->with(session()->flash('success', 'Contact Details Created!'));
@@ -33,22 +31,23 @@ class WithdrawController extends Controller
         }
     }
 
-    public function index(){
+    public function index()
+    {
         $withdraws = Withdraw::all();
-        foreach ($withdraws as $withdraw){
-            $withdraw->name = User::find( $withdraw->user_id)->name;
-
+        foreach ($withdraws as $withdraw) {
+            $withdraw->name = User::find($withdraw->user_id)->name;
         }
-        return view('backend.pages.withdraws.index',["withdraws" => $withdraws]);
+        return view('backend.pages.withdraws.index', ["withdraws" => $withdraws]);
     }
 
-    public function changeStatus($id){
+    public function changeStatus($id)
+    {
 
         $withdraw = Withdraw::find($id);
         $withdraw->status = 'done';
         $result = $withdraw->save();
 
-        $user = User::find( $withdraw->user_id);
+        $user = User::find($withdraw->user_id);
         $user->balance =   $user->balance - $withdraw->amount;
         $user->save();
 

@@ -24,6 +24,8 @@
                         <table class="table">
                             <thead class=" text-primary">
                                 <th>ID</th>
+                                <th>User ID</th>
+                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Amount</th>
                                 <th>Status</th>
@@ -34,10 +36,15 @@
                                 @foreach($marketings as $marketing)
                                 <tr>
                                     <td>{{ $marketing->id }}</td>
+                                    <td>{{ $marketing->user_id }}</td>
+                                    <td><img width="50px" src="{{ asset($marketing->image_url )}}" alt=""></td>
                                     <td>{{ $marketing->name }}</td>
                                     <td>{{ $marketing->amount }}</td>
                                     <td>{{ $marketing->status }}</td>
                                     <td>
+                                        <a href="{{ route('account.edit',$marketing->id) }}">
+                                            <button class="btn btn-default">Voucher</button>
+                                        </a>
                                         @if( $marketing->status=='pending' )
                                             <form method="post" action="{{ route('account.destroy',$marketing->id) }}">
                                                 @csrf

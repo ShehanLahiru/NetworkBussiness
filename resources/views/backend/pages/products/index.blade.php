@@ -1,7 +1,7 @@
 @extends('backend.layouts.app', [
-    'namePage' => 'projects',
+    'namePage' => 'products',
     'class' => 'sidebar-mini',
-    'activePage' => 'projects',
+    'activePage' => 'products',
   ])
 
 @section('content')
@@ -12,9 +12,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title"> Projects List</h4>
+                    <h4 class="card-title"> Products List</h4>
                     <div class="pull-right">
-                        <a href="{{ route('backend.projects.create') }}">
+                        <a href="{{ route('product.create') }}">
                             <button class="btn btn-primary">Create</button>
                         </a>
                     </div>
@@ -25,24 +25,23 @@
                             <thead class=" text-primary">
                                 <th>ID</th>
                                 <th>Image</th>
-                                <th>Title</th>
-                                <th>Status</th>
+                                <th>Name</th>
                                 <th>Category</th>
                                 <th>Action</th>
                             </thead>
                             <tbody>
-                                @foreach($projects as $project)
+                                @foreach($products as $product)
                                 <tr>
-                                    <td>{{ $project->id }}</td>
-                                    <td><img width="50px" src="{{ $project->image_url }}" alt=""></td>
-                                    <td>{{ $project->title }}</td>
-                                    <td>{{ $project->status }}</td>
-                                    <td>{{ $project->category }}</td>
+                                    <td>{{ $product->id }}</td>
+                                    <td><img width="50px" src="{{asset ($product->image_url) }}" alt=""></td>
+                                    <td>{{ $product->name }}</td>
+                                    {{-- <td>{{ $product->link }}</td> --}}
+                                    <td>{{ $product->category }}</td>
                                     <td>
-                                        <a href="{{ route('backend.projects.edit',$project->id) }}">
+                                        <a href="{{ route('product.edit',$product->id) }}">
                                             <button class="btn btn-default">Edit</button>
                                         </a>
-                                        <form method="post" action="{{ route('backend.projects.destroy',$project->id) }}">
+                                        <form method="post" action="{{ route('product.destroy',$product->id) }}">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" type="submit">Delete</button>
@@ -57,6 +56,6 @@
             </div>
         </div>
     </div>
-    {{ $projects->links() }}
+    {{-- {{ $projects->links() }} --}}
 </div>
 @endsection

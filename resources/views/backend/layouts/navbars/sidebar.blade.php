@@ -30,34 +30,52 @@
             <li class="@if ($activePage == 'marketings') active @endif">
                 <a href="{{ route('account.index') }}">
                     <i class="fas fa-user"></i>
-                    <p>{{ __('Marketing') }}</p>
+                    <p>{{ __('Marketings') }}</p>
                 </a>
             </li>
             <li class="@if ($activePage == 'withdraws') active @endif">
                 <a href="{{ route('withdraw.index') }}">
                     <i class="fas fa-user"></i>
-                    <p>{{ __('withdraw') }}</p>
+                    <p>{{ __('withdraws') }}</p>
                 </a>
             </li>
-            {{-- <li class="@if ($activePage == 'projects') active @endif">
-                <a href="{{ route('backend.projects.index') }}">
+            <li class="@if ($activePage == 'products') active @endif">
+                <a href="{{ route('product.index') }}">
                     <i class="fas fa-user"></i>
-                    <p>{{ __('Projects') }}</p>
-                </a>
-            </li> --}}
-            {{-- <li class="@if ($activePage == 'mainImages') active @endif">
-                <a href="{{ route('backend.mainImages.index') }}">
-                    <i class="fas fa-user"></i>
-                    <p>{{ __('Main Images') }}</p>
+                    <p>{{ __('Products') }}</p>
                 </a>
             </li>
-            <li class="@if ($activePage == 'services') active @endif">
-                <a href="{{ route('backend.services.index') }}">
+            <li class="@if ($activePage == 'productCategory') active @endif">
+                <a href="{{ route('productCategory.index') }}">
                     <i class="fas fa-user"></i>
-                    <p>{{ __('Services') }}</p>
+                    <p>{{ __('Product Categories') }}</p>
                 </a>
-            </li> --}}
+            </li>
+            <li class="@if ($activePage == 'payBills') active @endif">
+                <a href="{{ route('payBill.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Billing') }}</p>
+                </a>
+            </li>
+            <li class="@if ($activePage == 'reloads') active @endif">
+                <a href="{{ route('reload.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Reload') }}</p>
+                </a>
+            </li>
+            <li class="@if ($activePage == 'loans') active @endif">
+                <a href="{{ route('loan.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Loan') }}</p>
+                </a>
+            </li>
 
+            <li class="@if ($activePage == 'customers') active @endif">
+                <a href="{{ route('backend.customers.index') }}">
+                    <i class="fas fa-user"></i>
+                    <p>{{ __('Customers') }}</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

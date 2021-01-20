@@ -68,12 +68,12 @@
                                         <a href="{{ route('backend.customers.show',$customer->id) }}">
                                             <button class="btn btn-default">View</button>
                                         </a>
-                                        <form method="post"
+                                        {{-- <form method="post"
                                             action="{{ route('backend.customers.destroy',$customer->id) }}">
                                             @csrf
                                             @method('delete')
                                             <button class="btn btn-danger" type="submit">Delete</button>
-                                        </form>
+                                        </form> --}}
                                     </td>
                                 </tr>
                                 @endforeach

@@ -20,7 +20,7 @@
                     <h4 class="card-title"> Add Balance</h4>
                 </div>
                 <div class="card-body">
-                    <form id="riddle_create" method="post" action="{{ route('account.add') }}"
+                    <form id="riddle_create" method="post" action="{{ route('account.store') }}"
                         enctype="multipart/form-data">
                         @csrf
                         @include('backend.alerts.success')
@@ -28,7 +28,7 @@
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="id">{{__("ID")}}</label>
-                                    <input type="text" name="id" class="form-control" value="{{ old('id') }}">
+                                    <input type="text" name="id" class="form-control" value="{{ old('id') }}"required>
                                     @include('backend.alerts.feedback', ['field' => 'id'])
                                 </div>
                             </div>
@@ -37,11 +37,22 @@
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="amount">{{__("Amount")}}</label>
-                                    <input type="text" name="amount" class="form-control" value="{{ old('amount') }}">
+                                    <input type="text" name="amount" class="form-control" value="{{ old('amount') }}"required>
                                     @include('backend.alerts.feedback', ['field' => 'amount'])
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-7 pr-1">
+                                <div class="form-group">
+                                    <label class="d-block" for="title">{{__(" Voucher")}}</label>
+                                    <img class="gal-img prev_img" id="prev_img" src="{{asset('assets/img/dummy.jpg')}}">
+                                    <input type="file" class="custom-file-input" name="image" id="custom-file-input">
+                                    @include('backend.alerts.feedback', ['field' => 'image'])
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="card-footer ">
                             <button type="submit"
                                 class="btn btn-primary float-right btn-round">{{__('Add')}}</button>

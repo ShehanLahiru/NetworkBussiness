@@ -66,58 +66,42 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Watch videos</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid"
-                            style="height: 200px">
+                        <a href="{{ route('marketing') }}"> <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid"
+                            style="height: 200px"></a>
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Marketing</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <a href="{{ route('marketing') }}">  <h2 class="h2 text-main">Marketing</h2></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
-                            style="height: 200px">
+                        <a href="{{ route('products') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
+                            style="height: 200px"></a>
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Products</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <a href="{{ route('products') }}"> <h2 class="h2 text-main">Products</h2></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <a href="{{ route('billing') }}"> <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Bill Payments</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments</h2></a>
                     </div>
                 </div>
             </div>
@@ -131,56 +115,52 @@
         <div class="col-md-12 col-lg-12 mb-12">
             <div class="post-entry-main" style="background: rgba(0,0,0,.4)">
                 <div class="text p-4">
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
+                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
+                        දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2><br>
-                       <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
+                    </h2><br>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
+                        දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2><br>
-                       <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
+                    </h2><br>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
+                        දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2><br>
-                       <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
+                    </h2><br>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
+                        දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2><br>
-                       <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර දාන්න
+                    </h2><br>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
+                        දාන්න
                         පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                       </h2><br>
+                    </h2><br>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="site-section">
     <div class="container">
         <div class="row no-gutters align-items-stretch h-100">
             <div class="col-md-6 col-lg-4 mb-6">
                 <div class="post-entry-products">
                     <div class="image">
-                        <img src={{ asset("images/electronics.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/electronics.jpg") }} alt="Image" class="img-fluid"
+                            style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Electronics</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Electronics</a></h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-6">
                 <div class="post-entry-products">
                     <div class="image">
-                        <img src={{ asset("images/vehicals.jpg") }} alt="Image" class="img-fluid"
-                            style="height: 200px">
+                        <img src={{ asset("images/vehicals.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Vehicals</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Vehicals</a></h2>
                     </div>
                 </div>
             </div>
@@ -191,11 +171,7 @@
                             style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Properties</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Properties</a></h2>
                     </div>
                 </div>
             </div>
@@ -205,11 +181,7 @@
                         <img src={{ asset("images/garderns.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Home and Gardens</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Home and Gardens</a></h2>
                     </div>
                 </div>
             </div>
@@ -219,25 +191,19 @@
                         <img src={{ asset("images/fashion.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Fashions and Beauty</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Fashions & Beauty</a></h2>
                     </div>
+
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-6">
                 <div class="post-entry-products">
                     <div class="image">
-                        <img src={{ asset("images/education.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                        <img src={{ asset("images/education.jpg") }} alt="Image" class="img-fluid"
+                            style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main">Educations</h2>
-                        <h5 class="text-details">
-                            <p class="mb-0"><a href="#" class=""><small class="text-uppercase font-weight-bold ">Read
-                                        More</small></a></p>
-                        </h5>
+                        <h2 class="h2 text-main"> <a href="#">Educations</a></h2>
                     </div>
                 </div>
             </div>

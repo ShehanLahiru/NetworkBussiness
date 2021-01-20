@@ -18,6 +18,7 @@ class CreateMarketingsTable extends Migration
             $table->bigInteger('user_id');
             $table->double('amount');
             $table->string('status')->nullable();
+            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }

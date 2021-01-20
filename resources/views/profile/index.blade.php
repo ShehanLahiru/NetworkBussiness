@@ -25,9 +25,14 @@
                                     <input type="file" class="custom-file-input" id="custom-file-input" name="image">
                                     <h5 class="title">$user</h5>
                                 </a> --}}
-                                <button type="submit" class="btn btn-primary btn-round float-left">{{__('Edit Profile')}}</button>
+                                {{-- <button type="submit" class="btn btn-primary btn-round float-left">{{__('Edit Profile')}}</button> --}}
                             </div>
                         </form>
+                        <a href="{{ route('backend.users.edit',$user->id) }}">
+                        <button type="button" class="btn btn-primary float-lg-left" >
+                        Edit Profile
+                    </button>
+                         </a>
                         <button type="button" class="btn btn-primary float-lg-right" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                         Withdraw
@@ -119,60 +124,42 @@
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
                                             <div class="image">
-                                                <img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                                                <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <h2 class="h2 text-main">Watch videos</h2>
-                                                <h5 class="text-details">
-                                                    <p class="mb-0"><a href="#" class=""><small
-                                                                class="text-uppercase font-weight-bold ">Read
-                                                                More</small></a></p>
-                                                </h5>
+                                                <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
                                             <div class="image">
-                                                <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                                                <a href="{{ route('marketing') }}"> <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid"
+                                                    style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <h2 class="h2 text-main">Marketing</h2>
-                                                <h5 class="text-details">
-                                                    <p class="mb-0"><a href="#" class=""><small
-                                                                class="text-uppercase font-weight-bold ">Read
-                                                                More</small></a></p>
-                                                </h5>
+                                                <a href="{{ route('marketing') }}">  <h2 class="h2 text-main">Marketing</h2></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
                                             <div class="image">
-                                                <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                                                <a href="{{ route('products') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
+                                                    style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <h2 class="h2 text-main">Products</h2>
-                                                <h5 class="text-details">
-                                                    <p class="mb-0"><a href="#" class=""><small
-                                                                class="text-uppercase font-weight-bold ">Read
-                                                                More</small></a></p>
-                                                </h5>
+                                                <a href="{{ route('products') }}"> <h2 class="h2 text-main">Products</h2></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
-                                            <div class="image">
-                                                <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
+                                            <a href="{{ route('billing') }}">   <div class="image">
+                                                <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <h2 class="h2 text-main">Bill Payments and Loans</h2>
-                                                <h5 class="text-details">
-                                                    <p class="mb-0"><a href="#" class=""><small
-                                                                class="text-uppercase font-weight-bold ">Read
-                                                                More</small></a></p>
-                                                </h5>
+                                                <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments and Loans</h2></a>
                                             </div>
                                         </div>
                                     </div>

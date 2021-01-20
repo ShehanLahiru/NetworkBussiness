@@ -16,12 +16,14 @@ class UserController extends Controller
         $user = User::find(Auth::id());
         return view('profile.index', ["user" => $user]);
     }
-    public function index(){
+    public function index()
+    {
 
         $users = User::all();
-        return view('backend.pages.users.index',["users" => $users]);
+        return view('backend.pages.users.index', ["users" => $users]);
     }
-    public function create(){
+    public function create()
+    {
 
         return view('backend.pages.users.create');
     }
@@ -31,11 +33,14 @@ class UserController extends Controller
         $user = new User();
         $user->email = $request->input("email");
         $user->name = $request->input("name");
-        $user->balance = $request->input("balance");
-        $user->password =bcrypt($request->input("password"));
+        $user->username = $request->input("username");
+        $user->address = $request->input("address");
+        $user->contact_no = $request->input("contact_no");
+        $user->password = bcrypt($request->input("password"));
         $result = $user->save();
 
-        if( $request->input("parent_id")){
+        if (User::find($request->input("parent_id"))) {
+
             $node = User::find($request->input("parent_id"));
             $node->appendNode($user);
         }
@@ -49,52 +54,54 @@ class UserController extends Controller
     }
     public function edit($id)
     {
-        $results = User::limit(9)->reversed()->ancestorsAndSelf($id);
-        if (!$results->isEmpty()){
-            $i=0;
-            foreach($results as $result){
-                if($i==1){
-                    $result->balance += 300;
-                    User::where('id',$result->id)->update( ['balance'=>$result->balance]);
-                }
-                elseif($i == 2){
-                    $result->balance += 200;
-                    User::where('id',$result->id)->update( ['balance'=>$result->balance]);
-                }
-                elseif($i == 3){
-                    $result->balance += 100;
-                    User::where('id',$result->id)->update( ['balance'=>$result->balance]);
-                }
-                elseif($i == 4 || $i == 5 || $i == 6){
-                    $result->balance += 50;
-                    User::where('id',$result->id)->update( ['balance'=>$result->balance]);
-                }
-                elseif($i == 7 || $i == 8){
-                    $result->balance += 25;
-                    User::where('id',$result->id)->update( ['balance'=>$result->balance]);
-                }
-               $i++;
-            }
+        // $results = User::limit(9)->reversed()->ancestorsAndSelf($id);
+        // if (!$results->isEmpty()){
+        //     $i=0;
+        //     foreach($results as $result){
+        //         if($i==1){
+        //             $result->balance += 300;
+        //             User::where('id',$result->id)->update( ['balance'=>$result->balance]);
+        //         }
+        //         elseif($i == 2){
+        //             $result->balance += 200;
+        //             User::where('id',$result->id)->update( ['balance'=>$result->balance]);
+        //         }
+        //         elseif($i == 3){
+        //             $result->balance += 100;
+        //             User::where('id',$result->id)->update( ['balance'=>$result->balance]);
+        //         }
+        //         elseif($i == 4 || $i == 5 || $i == 6){
+        //             $result->balance += 50;
+        //             User::where('id',$result->id)->update( ['balance'=>$result->balance]);
+        //         }
+        //         elseif($i == 7 || $i == 8){
+        //             $result->balance += 25;
+        //             User::where('id',$result->id)->update( ['balance'=>$result->balance]);
+        //         }
+        //        $i++;
+        //     }
 
-        }
+        // }
 
-
-        // $user = User::find($id);
-        // return view('backend.pages.users.edit', ["user" => $user]);
+        $user = User::find($id);
+        return view('profile.edit', ["user" => $user]);
     }
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $user = User::find($id);
         $user->email = $request->input("email");
         $user->name = $request->input("name");
-        $user->balance = $request->input("balance");
+        $user->username = $request->input("username");
+        $user->address = $request->input("address");
+        $user->contact_no = $request->input("contact_no");
+
         $user->password = bcrypt($request->input("password"));
 
         $result = $user->save();
         if ($result) {
-            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Contact Details Updated!'));
+            return redirect()->route('profile')->with(session()->flash('success', 'Contact Details Updated!'));
         } else {
-            return redirect()->route('backend.users.index')->with(session()->flash('error', 'Something went wrong!'));
+            return redirect()->route('profile')->with(session()->flash('error', 'Something went wrong!'));
         }
     }
     public function destroy($id)
@@ -111,6 +118,6 @@ class UserController extends Controller
     public function view($id)
     {
         $user = User::find($id);
-        return redirect()->route('profile',["user" => $user]);
+        return redirect()->route('profile', ["user" => $user]);
     }
 }

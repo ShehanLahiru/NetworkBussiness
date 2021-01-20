@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -28,12 +30,13 @@ class LoginController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     public function redirectPath()
     {
-        if (\Auth::user()->is_admin== '1') {
-            return "/dashboard";
-            // or return route('routename');
-        }
 
-        return "/profile";
+        $user = Auth::user();
+        if ($user->is_admin == '1') {
+            return '/dashboard';
+        } else {
+            return '/profile';
+        }
         // or return route('routename');
     }
 
@@ -51,8 +54,16 @@ class LoginController extends Controller
     {
         return view('backend.auth.login');
     }
-    protected function loggedOut(Request $request) {
+    protected function loggedOut(Request $request)
+    {
         return view('frontend.page.home');
     }
-}
 
+    public function username()
+    {
+        $login = request()->input('login');
+        $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        request()->merge([$field => $login]);
+        return $field;
+    }
+}

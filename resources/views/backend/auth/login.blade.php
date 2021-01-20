@@ -35,17 +35,17 @@
                 </div>
                 </div>
                 <div class="card-body ">
-                <div class="input-group no-border form-control-lg {{ $errors->has('email') ? ' has-danger' : '' }}">
+                <div class="input-group no-border form-control-lg">
                     <span class="input-group-prepend">
                     <div class="input-group-text">
                         <i class="now-ui-icons users_circle-08"></i>
                     </div>
                     </span>
-                    <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required autofocus>
+                    <input class="form-control" placeholder="{{ __('Username or Email') }}" type="text" name="login" value="{{ old('username') ?: old('email') }}" required autofocus>
                 </div>
-                @if ($errors->has('email'))
+                @if ($errors->has('login'))
                     <span class="invalid-feedback" style="display: block;" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
+                    <strong>{{ $errors->first('login') }}</strong>
                     </span>
                 @endif
                 <div class="input-group no-border form-control-lg {{ $errors->has('password') ? ' has-danger' : '' }}">
