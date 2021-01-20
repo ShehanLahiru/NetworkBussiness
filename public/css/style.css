@@ -196,18 +196,23 @@ a {
     background: #f23a2e; }
 
 .site-footer {
-  background-color:black;
+  background-color:#2d3246;
   font-weight: bold;
   color: white ;
   font-weight: bold;
-  padding: 4em 0;
+  padding: 1em 0;
+  font-family: cursive;
 
 }
 
   .site-footer .footer-heading {
-    font-size: 30px; }
+    font-size: 30px;
+    color:#fbc834;
+    font-family: cursive;
+}
   .site-footer a {
-    color: #fff; }
+    color: white;
+    font-weight: 1000; }
   .site-footer ul li {
     margin-bottom: 10px; }
 

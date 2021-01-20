@@ -145,21 +145,21 @@
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
                                             <div class="image">
-                                                <a href="{{ route('products') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
+                                                <a href="{{ route('productCategories') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
                                                     style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <a href="{{ route('products') }}"> <h2 class="h2 text-main">Products</h2></a>
+                                                <a href="{{ route('productCategories') }}"> <h2 class="h2 text-main">Products</h2></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
-                                            <a href="{{ route('billing') }}">   <div class="image">
-                                                <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
+                                            <div class="image">
+                                                <a href="{{ route('billing') }}"> <img src={{ asset("images/billing1.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
                                             </div>
                                             <div class="text p-4">
-                                                <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments and Loans</h2></a>
+                                                <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments</h2></a>
                                             </div>
                                         </div>
                                     </div>

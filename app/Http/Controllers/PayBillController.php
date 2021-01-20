@@ -15,9 +15,9 @@ class PayBillController extends Controller
     {
 
         $id = Auth::id();
-        $reloads = Reload::where('user_id', $id)->get();
-        $payBills = PayBill::where('user_id', $id)->get();
-        $loans = Loan::where('user_id', $id)->get();
+        $reloads = Reload::where('user_id', $id)->orderby('created_at','desc')->get();
+        $payBills = PayBill::where('user_id', $id)->orderby('created_at','desc')->get();
+        $loans = Loan::where('user_id', $id)->orderby('created_at','desc')->get();
         return view('frontend/page/billing', ['reloads' => $reloads,'payBills' => $payBills,'loans' => $loans]);
     }
 
@@ -44,7 +44,7 @@ class PayBillController extends Controller
     public function index()
     {
 
-        $payBills = PayBill::all();
+        $payBills = PayBill::orderby('created_at','desc')->paginate(20);
         return view('backend.pages.payBills.index', ['payBills' =>  $payBills]);
     }
 

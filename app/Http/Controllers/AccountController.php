@@ -18,7 +18,7 @@ class AccountController extends Controller
     public function marketing()
     {
 
-        $accounts = Account::where('user_id', Auth::id());
+        $accounts = Account::where('user_id', Auth::id())->orderby('created_at','desc')->get();
         return view('frontend/page/marketing', ['accounts' =>  $accounts]);
     }
 
@@ -47,7 +47,7 @@ class AccountController extends Controller
     public function account()
     {
 
-        $accounts = Account::all();
+        $accounts = Account::orderby('created_at','desc')->paginate(20);
         foreach ($accounts as $account) {
             $account->name = User::find($account->user_id)->name;
             $account->child_name = User::find($account->children_id)->name;
@@ -58,7 +58,7 @@ class AccountController extends Controller
     public function index()
     {
 
-        $marketings = Marketing::all();
+        $marketings = Marketing::orderby('created_at','desc')->paginate(10);
         foreach ($marketings as $marketing) {
             $marketing->name = User::find($marketing->user_id)->name;
         }

@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('loan', 'LoanController');
         Route::post('/accountChangeStatus/{id}', 'AccountController@changeStatus')->name('account.changeStatus');
         Route::post('/loanChangeStatus/{id}', 'LoanController@changeStatus')->name('loan.changeStatus');
+        Route::post('/searchByDate/{model}', 'SearchController@searchByDate')->name('backend.searchByDate');
 
     });
 
@@ -74,7 +75,8 @@ Route::resource('register', 'RegisterController');
 
 Route::get('/contact_us', 'ContactDetailController@contactDetails')->name('contact-us');
 Route::get('/about_us', 'ContactDetailController@aboutus')->name('about-us');
-Route::get('/products', 'ProductController@product')->name('products');
+Route::get('/products/{id}', 'ProductController@product')->name('products');
+Route::get('/productCategories', 'ProductCategoryController@productCategories')->name('productCategories');
 
 Route::get('/videoes', 'VideoController@videoes')->name('videoes');
 Route::get('/marketing', 'AccountController@marketing')->name('marketing');

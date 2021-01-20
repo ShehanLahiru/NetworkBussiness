@@ -8,10 +8,16 @@ use Illuminate\Http\Request;
 
 class ProductCategoryController extends Controller
 {
+
+    public function productCategories()
+    {
+        $productCategories = ProductCategory::orderby('created_at','desc')->get();
+        return view('frontend/page/productCategories',['productCategories' => $productCategories]);
+    }
     public function index()
     {
 
-        $productCategories = ProductCategory::all();
+        $productCategories = ProductCategory::orderby('created_at','desc')->paginate(10);
         return view('backend.pages.productCategory.index', ['productCategories' =>  $productCategories]);
     }
     public function create()

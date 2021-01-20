@@ -33,7 +33,7 @@ class WithdrawController extends Controller
 
     public function index()
     {
-        $withdraws = Withdraw::all();
+        $withdraws = Withdraw::orderby('created_at','desc')->paginate(20);
         foreach ($withdraws as $withdraw) {
             $withdraw->name = User::find($withdraw->user_id)->name;
         }

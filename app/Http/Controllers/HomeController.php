@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Project;
-use App\MainImage;
 use App\User;
+use App\Project;
+use App\Customer;
+use App\MainImage;
 use Carbon\Carbon;
 use App\ContactDetail;
-use App\Customer;
+use App\ProductCategory;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 
@@ -20,9 +21,9 @@ class HomeController extends Controller
         // foreach($projects as $project){
         //     $project->description =  substr( $project->description ,0,100);
         // }
-
-
-        return view('frontend/page/home');
+        $productCategories = ProductCategory::all();
+    
+        return view('frontend/page/home',['productCategories'=>$productCategories]);
     }
     public function index(){
 

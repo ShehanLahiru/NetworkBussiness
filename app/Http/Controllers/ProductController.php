@@ -9,16 +9,16 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function product()
+    public function product($id)
     {
-
-        return view('frontend/page/product');
+        $products = Product::where('category_id',$id)->orderby('created_at','desc')->paginate(15);
+        return view('frontend/page/product',['products' => $products]);
     }
 
     public function index()
     {
 
-        $products = Product::all();
+        $products = Product::orderby('created_at','desc')->paginate(20);
         foreach ($products as $product) {
 
             $product->category = ProductCategory::find($product->category_id)->name;

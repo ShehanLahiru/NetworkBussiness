@@ -30,7 +30,7 @@ class ReloadController extends Controller
     public function index()
     {
 
-        $reloads = Reload::all();
+        $reloads = Reload::orderby('created_at','desc')->paginate(20);
         return view('backend.pages.reloads.index', ['reloads' =>  $reloads]);
     }
 

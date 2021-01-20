@@ -7,14 +7,11 @@
             <div class="row align-items-center text-center image-details">
                 <div class="col-md-6">
                     <h1 class="head-topic">Welcome</h1>
-                    <h2 class="sub-topic">Marketings Sri Lanka</h2>
+                    <h2 class="sub-topic">Remote Promotions Sri Lanka</h2>
                 </div>
                 <div class="col-lg-10 col-md-12">
                     <p class="page-para">
-                        Solid Water Systems is Sri Lanka's one of the premier water treatment providers.
-                        We can maintain any kind of wastewater treatment plant and We provide full services to any type
-                        of
-                        reverse osmosis plant.
+                        ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
                     </p>
                 </div>
             </div>
@@ -26,14 +23,11 @@
             <div class="row align-items-center text-center image-details">
                 <div class="col-md-6">
                     <h1 class="head-topic">Welcome</h1>
-                    <h2 class="sub-topic">Marketings Sri Lanka</h2>
+                    <h2 class="sub-topic">Remote Promotions Sri Lanka</h2>
                 </div>
                 <div class="col-lg-10 col-md-12">
                     <p class="page-para">
-                        Solid Water Systems is Sri Lanka's one of the premier water treatment providers.
-                        We can maintain any kind of wastewater treatment plant and We provide full services to any type
-                        of
-                        reverse osmosis plant.
+                        ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
                     </p>
                 </div>
             </div>
@@ -45,14 +39,11 @@
             <div class="row align-items-center text-center image-details">
                 <div class="col-md-6">
                     <h1 class="head-topic">Welcome</h1>
-                    <h2 class="sub-topic">Marketings Sri Lanka</h2>
+                    <h2 class="sub-topic">Remote Promotions Sri Lanka</h2>
                 </div>
                 <div class="col-lg-10 col-md-12">
                     <p class="page-para">
-                        Solid Water Systems is Sri Lanka's one of the premier water treatment providers.
-                        We can maintain any kind of wastewater treatment plant and We provide full services to any type
-                        of
-                        reverse osmosis plant.
+                        ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
                     </p>
                 </div>
             </div>
@@ -87,11 +78,11 @@
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
-                        <a href="{{ route('products') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
+                        <a href="{{ route('productCategories') }}">  <img src={{ asset("images/products3.jpg") }} alt="Image" class="img-fluid"
                             style="height: 200px"></a>
                     </div>
                     <div class="text p-4">
-                        <a href="{{ route('products') }}"> <h2 class="h2 text-main">Products</h2></a>
+                        <a href="{{ route('productCategories') }}"> <h2 class="h2 text-main">Products</h2></a>
                     </div>
                 </div>
             </div>
@@ -143,18 +134,19 @@
 <div class="site-section">
     <div class="container">
         <div class="row no-gutters align-items-stretch h-100">
+            @foreach($productCategories as $productCategory)
             <div class="col-md-6 col-lg-4 mb-6">
                 <div class="post-entry-products">
                     <div class="image">
-                        <img src={{ asset("images/electronics.jpg") }} alt="Image" class="img-fluid"
-                            style="height: 200px">
+                        <img src={{ asset($productCategory->image_url) }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main"> <a href="#">Electronics</a></h2>
+                        <h2 class="h2 text-main"> <a href="{{ route('products', $productCategory->id) }}">{{$productCategory->name}}</a></h2>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-6">
+            @endforeach
+            {{-- <div class="col-md-6 col-lg-4 mb-6">
                 <div class="post-entry-products">
                     <div class="image">
                         <img src={{ asset("images/vehicals.jpg") }} alt="Image" class="img-fluid" style="height: 200px">
@@ -206,7 +198,7 @@
                         <h2 class="h2 text-main"> <a href="#">Educations</a></h2>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

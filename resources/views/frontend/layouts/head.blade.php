@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Network Bussiness </title>
+    <title>Remote Permission</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-     <meta name="title" content="Network Bussiness">
-     <meta name="description" content=" Network Bussiness.">
-     <meta name="keywords" content="Network Bussiness">
+     <meta name="title" content="Remote Permission">
+     <meta name="description" content="Remote Permission">
+     <meta name="keywords" content="Remote Permission">
 
 </head>
 
@@ -68,12 +68,14 @@
                                         </li>
                                         <li><a href={{ route('about-us') }}>About Us</a></li>
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
+                                        <li><a href="{{ route('marketing') }}">Marketings</a></li>
                                         @if (!Auth::check())
                                             <li><a href="{{ route('backend.login') }}"style="background:green;border-radius: 20px; font-weight: 1000;">Login</a></li>
                                             <li><a href="{{ route('register.create') }}"style="background:#2184AB ;border-radius: 10px; font-weight: 1000;">Register</a></li>
 
                                         @else
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
+
                                         <li><a href="{{ route('backend.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                             Logout
                                         </a></li>
