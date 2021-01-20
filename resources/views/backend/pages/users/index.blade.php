@@ -49,12 +49,7 @@
                     </a>
                 </div>
             </div>
-                    <div class="pull-right">
-                        <a href="{{ route('backend.users.create') }}">
-                            <button class="btn btn-primary">Create</button>
-                        </a>
-                    </div>
-                </div>
+
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
@@ -98,7 +93,7 @@
                 </div>
             </div>
         </div>
+        </div>
+        {{ $users->links() }}
     </div>
-    {{ $users->links() }}
-</div>
 @endsection

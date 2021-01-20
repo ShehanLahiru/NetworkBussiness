@@ -37,7 +37,9 @@
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="amount">{{__("Amount")}}</label>
-                                    <input type="text" name="amount" class="form-control" value="{{ old('amount') }}"required>
+                                    <select name="amount" class="form-control"  style="border:1px solid #E3E3E3" required>
+                                        <option value= 1500.00 >1500</option>
+                                    </select>
                                     @include('backend.alerts.feedback', ['field' => 'amount'])
                                 </div>
                             </div>

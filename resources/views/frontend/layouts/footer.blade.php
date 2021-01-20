@@ -39,7 +39,7 @@ background-repeat: no-repeat;">
                     <h6>
                         <i class="fas fa-phone mr-3"></i>+94710852233 - Mahesh </h6>
                     <h6>
-                        <i class="fas fa-print mr-3"></i> <a
+                        <i class="fas fa-print mr-3"></i> <a target="_blank"
                             href="https://www.facebook.com/%E0%B6%BD%E0%B7%83%E0%B7%8A%E0%B7%83%E0%B6%B1-%E0%B6%9C%E0%B7%99%E0%B6%AF%E0%B6%BB-lassana-gedara-103792461590827">Facebook</a>
                     </h6>
 

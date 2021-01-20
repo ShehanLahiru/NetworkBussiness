@@ -7,26 +7,16 @@
         <div class="col-md-12 col-lg-12 mb-12">
             <div class="post-entry-main" style="background: rgba(0,0,0,.4)">
                 <div class="text p-4">
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
-                        දාන්න
-                        පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                    </h2><br>
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
-                        දාන්න
-                        පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                    </h2><br>
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
-                        දාන්න
-                        පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                    </h2><br>
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
-                        දාන්න
-                        පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                    </h2><br>
-                    <h2 class="h2 text-main-products" style="color: #fbc834">අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට 5කට විතර
-                        දාන්න
-                        පුලුවන්නේ අපිට 5කට විතර දාන්න පුලුවන්නේ අපිට
-                    </h2><br>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">  <h2 class="h2 text-main-products" style="color: #fbc834">ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
+                    </h2>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">  <h2 class="h2 text-main-products" style="color: #fbc834">ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
+                    </h2>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">  <h2 class="h2 text-main-products" style="color: #fbc834">ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
+                    </h2>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">  <h2 class="h2 text-main-products" style="color: #fbc834">ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
+                    </h2>
+                    <h2 class="h2 text-main-products" style="color: #fbc834">  <h2 class="h2 text-main-products" style="color: #fbc834">ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
+                    </h2>
                 </div>
             </div>
         </div>
@@ -116,8 +106,9 @@
                                             <div class="col-md-7 pr-1">
                                                 <div class="form-group">
                                                     <label for="amount">{{__("Amount")}}</label>
-                                                    <input type="text" name="amount" class="form-control"
-                                                        value="{{ old('amount') }}"required>
+                                                    <select name="amount" class="form-control"  style="border:1px solid #E3E3E3" required>
+                                                        <option value= 1500.00 >1500</option>
+                                                    </select>
                                                     @include('backend.alerts.feedback', ['field' => 'amount'])
                                                 </div>
                                             </div>
