@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function product($id)
     {
-        $products = Product::where('category_id',$id)->orderby('created_at','desc')->paginate(15);
+        $products = Product::where('category_id',$id)->orderby('created_at','desc')->paginate(1);
         return view('frontend/page/product',['products' => $products]);
     }
 

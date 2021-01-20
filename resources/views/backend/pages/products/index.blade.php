@@ -13,6 +13,36 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title"> Products List</h4>
+                    <form id="item" method="post" action="{{ route('backend.searchByID','Product') }}"
+                    enctype="multipart/form-data">
+                    @csrf
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="id">{{__("Search by ID")}}</label>
+                                <input type="text" class="form-control" name="id">
+                                </div>
+                            </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary btn-round">{{__('Search')}}</button>
+                        </div>
+                    </div>
+                </form>
+                <form id="item" method="post" action="{{ route('backend.searchByName','Product') }}"
+                    enctype="multipart/form-data">
+                    @csrf
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="name">{{__("Search by Name")}}</label>
+                                <input type="text" class="form-control" name="name">
+                                </div>
+                            </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary btn-round">{{__('Search')}}</button>
+                        </div>
+                    </div>
+                </form>
                     <div class="pull-right">
                         <a href="{{ route('product.create') }}">
                             <button class="btn btn-primary">Create</button>
@@ -56,6 +86,6 @@
             </div>
         </div>
     </div>
-    {{-- {{ $projects->links() }} --}}
+    {{ $products->links() }}
 </div>
 @endsection

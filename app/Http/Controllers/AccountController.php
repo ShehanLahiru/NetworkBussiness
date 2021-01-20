@@ -58,7 +58,7 @@ class AccountController extends Controller
     public function index()
     {
 
-        $marketings = Marketing::orderby('created_at','desc')->paginate(10);
+        $marketings = Marketing::orderby('created_at','desc')->paginate(20);
         foreach ($marketings as $marketing) {
             $marketing->name = User::find($marketing->user_id)->name;
         }

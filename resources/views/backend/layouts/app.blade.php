@@ -35,7 +35,7 @@
 
     <!--  Social tags      -->
     <meta name="keywords" content="">
-    <meta name="description" content="Network Bussiness">
+    <meta name="description" content="Remote Promotions">
     <meta itemprop="image" content="{{ asset('images/logo.jpg') }}">
 
 
@@ -56,10 +56,10 @@
     <meta property="og:url" content="http://demos.creative-tim.com/now-ui-dashboard-pro/examples/dashboard.html"/>
     <meta property="og:image" content="{{  asset('images/logo.jpg') }}"/>
     <meta property="og:description"
-          content="  Solid Water Systems"/>
-    <meta property="og:site_name" content="Network Bussiness"/>
+          content=" Remote Promotions"/>
+    <meta property="og:site_name" content="Remote Promotions"/>
     <title>
-       Solid Water Systems
+        Remote Promotions
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
           name='viewport'/>

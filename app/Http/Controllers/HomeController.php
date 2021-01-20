@@ -21,8 +21,8 @@ class HomeController extends Controller
         // foreach($projects as $project){
         //     $project->description =  substr( $project->description ,0,100);
         // }
-        $productCategories = ProductCategory::all();
-    
+        $productCategories = ProductCategory::limit(6)->get();
+
         return view('frontend/page/home',['productCategories'=>$productCategories]);
     }
     public function index(){

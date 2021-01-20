@@ -5,7 +5,7 @@
       <script>
         document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
       </script>, {{__(" Designed by")}}
-      <a href="" target="_blank">Network Bussiness</a>
+      <a href="" target="_blank">Bee Technology/a>
     </div>
   </div>
 </footer>

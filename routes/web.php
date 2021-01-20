@@ -35,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/accountChangeStatus/{id}', 'AccountController@changeStatus')->name('account.changeStatus');
         Route::post('/loanChangeStatus/{id}', 'LoanController@changeStatus')->name('loan.changeStatus');
         Route::post('/searchByDate/{model}', 'SearchController@searchByDate')->name('backend.searchByDate');
+        Route::post('/searchByID/{id}', 'SearchController@searchByID')->name('backend.searchByID');
+        Route::post('/searchByName/{name}', 'SearchController@searchByname')->name('backend.searchByName');
 
     });
 

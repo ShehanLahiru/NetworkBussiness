@@ -20,7 +20,7 @@
                     <h4 class="card-title"> Update Users</h4>
                 </div>
                 <div class="card-body">
-                    <form id="riddle_update" method="post" action="{{ route('backend.projects.update', $user->id) }}"
+                    <form id="riddle_update" method="post" action="{{ route('backend.users.update', $user->id) }}"
                         enctype="multipart/form-data">
                         @csrf
                         @method('put')

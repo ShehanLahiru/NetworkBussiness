@@ -18,9 +18,9 @@ use Illuminate\Support\Carbon;
 
 class SearchController extends Controller
 {
-    public function searchByDate(Request $request,$model)
+    public function searchByDate(Request $request,$id)
     {
-        if($model=='Account'){
+        if($id=='Account'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -33,7 +33,7 @@ class SearchController extends Controller
 
         }
 
-        elseif($model=='Marketing'){
+        elseif($id=='Marketing'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -46,7 +46,7 @@ class SearchController extends Controller
 
         }
 
-        elseif($model=='Loan'){
+        elseif($id=='Loan'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -55,7 +55,7 @@ class SearchController extends Controller
 
 
         }
-        elseif($model=='PayBill'){
+        elseif($id=='PayBill'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -64,7 +64,7 @@ class SearchController extends Controller
 
 
         }
-        elseif($model=='Reload'){
+        elseif($id=='Reload'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -73,7 +73,7 @@ class SearchController extends Controller
 
 
         }
-        elseif($model=='Withdraw'){
+        elseif($id=='Withdraw'){
             $to = Carbon::parse($request->to)->format('Y-m-d');
             $from = Carbon::parse($request->from)->format('Y-m-d');
 
@@ -85,6 +85,101 @@ class SearchController extends Controller
 
 
         }
+
+    }
+
+    public function searchByID(Request $request,$id)
+    {
+        if($id=='Account'){
+
+            $accounts = Account::where('id',$request->id)->paginate(5);
+            foreach ($accounts as $account) {
+                $account->name = User::find($account->user_id)->name;
+                $account->child_name = User::find($account->children_id)->name;
+            }
+            return view('backend.pages.accounts.index', ["accounts" => $accounts]);
+
+        }
+
+        elseif($id=='Marketing'){
+
+            $marketings = Marketing::where('id',$request->id)->paginate(5);
+            foreach ($marketings as $marketing) {
+                $marketing->name = User::find($marketing->user_id)->name;
+            }
+            return view('backend.pages.marketings.index', ["marketings" => $marketings]);
+
+
+        }
+
+        elseif($id=='Loan'){
+
+            $loans = Loan::where('id',$request->id)->paginate(5);
+            return view('backend.pages.loans.index', ["loans" => $loans]);
+
+
+        }
+        elseif($id=='PayBill'){
+
+
+            $payBills = PayBill::where('id',$request->id)->paginate(5);
+            return view('backend.pages.payBills.index', ["payBills" => $payBills]);
+
+
+        }
+        elseif($id=='Reload'){
+
+
+            $reloads = Reload::where('id',$request->id)->paginate(5);
+            return view('backend.pages.reloads.index', ["reloads" => $reloads]);
+
+
+        }
+        elseif($id=='Withdraw'){
+
+           $withdraws = Withdraw::where('id',$request->id)->paginate(5);
+            foreach ($withdraws as $withdraw) {
+                $withdraw->name = User::find($withdraw->user_id)->name;
+            }
+            return view('backend.pages.withdraws.index', ["withdraws" => $withdraws]);
+
+
+        }
+
+        elseif($id=='User'){
+            $users = User::where('id',$request->id)->paginate(5);
+             return view('backend.pages.users.index', ["users" => $users]);
+
+         }
+         elseif($id=='Product'){
+            $products = Product::where('id',$request->id)->paginate(20);
+            foreach ($products as $product) {
+
+                $product->category = ProductCategory::find($product->category_id)->name;
+            }
+             return view('backend.pages.products.index', ["products" => $products]);
+
+         }
+
+    }
+ 
+    public function searchByName(Request $request,$name){
+
+        if($name=='User'){
+            $users = User::where('name', 'like', '%' . strtolower($request->name) . '%')->paginate(20);
+             return view('backend.pages.users.index', ["users" => $users]);
+
+         }
+         elseif($name=='Product'){
+            $products = Product::where('name', 'like', '%' . strtolower($request->name) . '%')->paginate(20);
+            foreach ($products as $product) {
+
+                $product->category = ProductCategory::find($product->category_id)->name;
+            }
+             return view('backend.pages.products.index', ["products" => $products]);
+
+         }
+
 
     }
 }

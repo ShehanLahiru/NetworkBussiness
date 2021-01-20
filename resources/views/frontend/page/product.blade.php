@@ -69,6 +69,7 @@
                 </div>
             </div> --}}
         </div>
+        {{ $products->links() }}
     </div>
 </div>
 @include('frontend.layouts.footer')
