@@ -56,7 +56,8 @@ class LoginController extends Controller
     }
     protected function loggedOut(Request $request)
     {
-        return view('frontend.page.home');
+        return redirect()->route('home');
+
     }
 
     public function username()
