@@ -29,7 +29,7 @@
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="title">{{__(" Name ")}}</label>
-                                    <input type="text" name="title" class="form-control"
+                                    <input type="text" name="name" class="form-control"
                                         value="{{ old('name',$product->name) }}"required>
                                     @include('backend.alerts.feedback', ['field' => 'name'])
                                 </div>
@@ -49,7 +49,7 @@
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="category">{{__(" Category")}}</label>
-                                    <select name="status" class="form-control" style="border:1px solid #E3E3E3"required>
+                                    <select name="category" class="form-control" style="border:1px solid #E3E3E3"required>
                                         @foreach ($categories as $category )
                                         <option {{$category->name == $category->name ? 'selected' : ''}}  value={{ $category->id }}>{{ $category->name }}</option>
                                         @endforeach
