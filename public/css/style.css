@@ -39,7 +39,9 @@ a {
  .text-main{
     font-size: 20px;
     font-weight: 700;
-    color:darkcyan;
+    color:black;
+    text-align: center;
+
  }
  .text-main-products{
     font-size: 15px;

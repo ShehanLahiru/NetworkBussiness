@@ -86,6 +86,15 @@ background-repeat: no-repeat;">
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-7 pr-1">
+                                            <div class="form-group">
+                                                <label for="nic"style="color: white">{{__("NIC")}}</label>
+                                                <input type="text" name="nic" class="form-control" value="{{ old('nic') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
+                                                @include('backend.alerts.feedback', ['field' => 'nic'])
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-footer ">

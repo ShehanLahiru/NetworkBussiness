@@ -35,6 +35,7 @@ class UserController extends Controller
         $user->name = $request->input("name");
         $user->username = $request->input("username");
         $user->address = $request->input("address");
+        $user->nic = $request->input("nic");
         $user->contact_no = $request->input("contact_no");
         $user->password = bcrypt($request->input("password"));
         $result = $user->save();
@@ -47,7 +48,7 @@ class UserController extends Controller
 
 
         if ($result) {
-            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Contact Details Created!'));
+            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Created!'));
         } else {
             return redirect()->route('backend.users.index')->with(session()->flash('error', 'Something went wrong!'));
         }
@@ -84,7 +85,7 @@ class UserController extends Controller
         // }
 
         $user = User::find($id);
-        return view('profile.edit', ["user" => $user]);
+        return view('backend.pages.users.edit', ["user" => $user]);
     }
     public function update(Request $request, $id)
     {
@@ -93,23 +94,36 @@ class UserController extends Controller
         $user->name = $request->input("name");
         $user->username = $request->input("username");
         $user->address = $request->input("address");
+        $user->nic = $request->input("nic");
         $user->contact_no = $request->input("contact_no");
 
         $user->password = bcrypt($request->input("password"));
 
         $result = $user->save();
-        if ($result) {
-            return redirect()->route('profile')->with(session()->flash('success', 'Contact Details Updated!'));
-        } else {
-            return redirect()->route('profile')->with(session()->flash('error', 'Something went wrong!'));
+        if($user->is_admin == 1){
+            if ($result) {
+                return redirect()->route('profile');
+            } else {
+                return redirect()->route('profile')->with(session()->flash('error', 'Something went wrong!'));
+            }
         }
+        else{
+
+        if ($result) {
+            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Created!'));
+        } else {
+            return redirect()->route('backend.users.index')->with(session()->flash('error', 'Something went wrong!'));
+        }
+
+        }
+
     }
     public function destroy($id)
     {
         $result = User::find($id);
         $result->delete();
         if ($result) {
-            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Contact Details Deleted!'));
+            return redirect()->route('backend.users.index')->with(session()->flash('success', 'Deleted!'));
         } else {
             return redirect()->route('backend.users.index')->with(session()->flash('error', 'Something went wrong!'));
         }
@@ -120,4 +134,11 @@ class UserController extends Controller
         $user = User::find($id);
         return redirect()->route('profile', ["user" => $user]);
     }
+
+    public function profileEdit()
+    {
+        $user = User::find(Auth::id());
+        return view('profile.edit', ["user" => $user]);
+    }
+
 }

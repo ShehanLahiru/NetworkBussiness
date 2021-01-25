@@ -45,6 +45,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-7 pr-1">
+                                <div class="form-group">
+                                    <label for="nic">{{__(" NIC ")}}</label>
+                                    <input type="text" name="nic" class="form-control"
+                                        value="{{ old('nic',$user->nic) }}"required>
+                                    @include('backend.alerts.feedback', ['field' => 'nic'])
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row">

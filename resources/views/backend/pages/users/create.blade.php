@@ -32,13 +32,31 @@
                                     @include('backend.alerts.feedback', ['field' => 'name'])
                                 </div>
                             </div>
-                        </div>
+                         </div>
+                            <div class="row">
+                                <div class="col-md-7 pr-1">
+                                    <div class="form-group">
+                                        <label for="username">{{__("UserName")}}</label>
+                                        <input type="text" name="username" class="form-control" value="{{ old('username') }}">
+                                        @include('backend.alerts.feedback', ['field' => 'username'])
+                                    </div>
+                                </div>
+                            </div>
                         <div class="row">
                             <div class="col-md-7 pr-1">
                                 <div class="form-group">
                                     <label for="email">{{__("Email")}}</label>
                                     <input type="text" name="email" class="form-control" value="{{ old('email') }}">
                                     @include('backend.alerts.feedback', ['field' => 'email'])
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7 pr-1">
+                                <div class="form-group">
+                                    <label for="nic">{{__("NIC")}}</label>
+                                    <input type="text" name="nic" class="form-control" value="{{ old('nic') }}">
+                                    @include('backend.alerts.feedback', ['field' => 'nic'])
                                 </div>
                             </div>
                         </div>

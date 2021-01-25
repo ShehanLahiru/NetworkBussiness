@@ -28,13 +28,13 @@
                                 {{-- <button type="submit" class="btn btn-primary btn-round float-left">{{__('Edit Profile')}}</button> --}}
                             </div>
                         </form>
-                        <a href="{{ route('backend.users.edit',$user->id) }}">
+                        <a href="{{ route('profileEdit') }}">
                         <button type="button" class="btn btn-primary float-lg-left" >
                         Edit Profile
                     </button>
                          </a>
-                        <button type="button" class="btn btn-primary float-lg-right" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
+                        <button type="button" class="btn float-lg-right" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" style=" background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;";">
                         Withdraw
                     </button>
 
@@ -124,16 +124,6 @@
                                     <div class="col-md-6 col-lg-6 mb-6">
                                         <div class="post-entry">
                                             <div class="image">
-                                                <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
-                                            </div>
-                                            <div class="text p-4">
-                                                <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-6 mb-6">
-                                        <div class="post-entry">
-                                            <div class="image">
                                                 <a href="{{ route('marketing') }}"> <img src={{ asset("images/marketing1.jpg") }} alt="Image" class="img-fluid"
                                                     style="height: 200px"></a>
                                             </div>
@@ -160,6 +150,16 @@
                                             </div>
                                             <div class="text p-4">
                                                 <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments</h2></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 mb-6">
+                                        <div class="post-entry">
+                                            <div class="image">
+                                                <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
+                                            </div>
+                                            <div class="text p-4">
+                                                <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
                                             </div>
                                         </div>
                                     </div>

@@ -50,6 +50,7 @@ Route::post('/add', 'AccountController@add')->name('account.add');
 
 
 Route::get('/profile', 'UserController@profile')->name('profile');
+Route::get('/profileEdit', 'UserController@profileEdit')->name('profileEdit');
 Route::get('/accounts', 'AccountController@account')->name('accounts');
 Route::post('/payBills', 'PayBillController@addBill')->name('payBills');
 Route::post('/reloads', 'ReloadController@addReload')->name('reloads');

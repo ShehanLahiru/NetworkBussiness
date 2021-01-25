@@ -69,11 +69,8 @@
                                         <li><a href={{ route('about-us') }}>About Us</a></li>
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
                                         <li><a href="{{ route('marketing') }}">Marketings</a></li>
-                                        @if (!Auth::check())
-                                            <li><a href="{{ route('backend.login') }}"style="background:green;border-radius: 20px; font-weight: 1000;">Login</a></li>
-                                            <li><a href="{{ route('register.create') }}"style="background:#2184AB ;border-radius: 10px; font-weight: 1000;">Register</a></li>
-
-                                        @else
+                                        @if (Auth::check())
+                                        
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
 
                                         <li><a href="{{ route('backend.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">

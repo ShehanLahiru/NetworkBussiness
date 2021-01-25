@@ -9,6 +9,22 @@
                     <h1 class="head-topic">Welcome</h1>
                     <h2 class="sub-topic">Remote Promotions Sri Lanka</h2>
                 </div>
+                @if (!Auth::check())
+                <div class="col-md-3">
+                        <a href="{{ route('backend.login') }}">
+                            <button type="button" class=" btn btn-lg"style="background-image: linear-gradient(-180deg, #2184AB 0%, #143868 100%);border-radius: 10px; font-weight: 1000;">
+                                Login Here
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ route('register.create') }}">
+                            <button type="button" class=" btn  btn-lg"style="background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;">
+                                Join Now
+                            </button>
+                        </a>
+                    </div>
+                @endif
                 <div class="col-lg-10 col-md-12">
                     <p class="page-para">
                         ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
@@ -25,6 +41,22 @@
                     <h1 class="head-topic">Welcome</h1>
                     <h2 class="sub-topic">Remote Promotions Sri Lanka</h2>
                 </div>
+                @if (!Auth::check())
+                <div class="col-md-3">
+                        <a href="{{ route('backend.login') }}">
+                            <button type="button" class=" btn btn-lg"style="background-image: linear-gradient(-180deg, #2184AB 0%, #143868 100%);border-radius: 10px; font-weight: 1000;">
+                                Login Here
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ route('register.create') }}">
+                            <button type="button" class=" btn  btn-lg"style="background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;">
+                                Join Now
+                            </button>
+                        </a>
+                    </div>
+                @endif
                 <div class="col-lg-10 col-md-12">
                     <p class="page-para">
                         ඉතා පහසුවෙන් අන්තර්ජාලයෙන් මුදල් ඉපැයීමට අප හා එකතුවෙන්න..
@@ -33,7 +65,7 @@
             </div>
         </div>
     </div>
-    <div class="site-blocks-cover overlay" style="background-image: url(images/main1.jpg);" data-aos="fade"
+    {{-- <div class="site-blocks-cover overlay" style="background-image: url(images/main1.jpg);" data-aos="fade"
         data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center text-center image-details">
@@ -48,22 +80,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 <div class="site-section">
     <div class="container">
         <div class="row no-gutters align-items-stretch h-100">
-            <div class="col-md-6 col-lg-6 mb-6">
-                <div class="post-entry">
-                    <div class="image">
-                        <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
-                    </div>
-                    <div class="text p-4">
-                        <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
-                    </div>
-                </div>
-            </div>
             <div class="col-md-6 col-lg-6 mb-6">
                 <div class="post-entry">
                     <div class="image">
@@ -93,6 +115,16 @@
                     </div>
                     <div class="text p-4">
                         <a href="{{ route('billing') }}"> <h2 class="h2 text-main">Bill Payments</h2></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-6">
+                <div class="post-entry">
+                    <div class="image">
+                        <a href="{{ route('videoes') }}"><img src={{ asset("images/youtube.jpg") }} alt="Image" class="img-fluid" style="height: 200px"></a>
+                    </div>
+                    <div class="text p-4">
+                        <a href="{{ route('videoes') }}">  <h2 class="h2 text-main">Watch videos</h2></a>
                     </div>
                 </div>
             </div>
@@ -132,7 +164,7 @@
                         <img src={{ asset($productCategory->image_url) }} alt="Image" class="img-fluid" style="height: 200px">
                     </div>
                     <div class="text p-4">
-                        <h2 class="h2 text-main"> <a href="{{ route('products', $productCategory->id) }}">{{$productCategory->name}}</a></h2>
+                        <h2 class="h2 text-main"> <a style="color: black" href="{{ route('products', $productCategory->id) }}">{{$productCategory->name}}</a></h2>
                     </div>
                 </div>
             </div>

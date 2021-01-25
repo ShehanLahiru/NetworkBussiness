@@ -1,3 +1,4 @@
+@include('frontend.layouts.head')
 @extends('backend.layouts.app', [
     'namePage' => 'Login page',
     'class' => 'login-page sidebar-mini ',

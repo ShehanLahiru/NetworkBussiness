@@ -56,6 +56,9 @@
                             <thead class=" text-primary">
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>User Name</th>
+                                <th>NIC</th>
+                                <th>Contact No</th>
                                 <th>Email</th>
                                 <th>Balance</th>
                                 <th>Action</th>
@@ -65,10 +68,13 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
+                                    <td>{{ $user->username }}</td>
+                                    <td>{{ $user->nic }}</td>
+                                    <td>{{ $user->contact_no }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->balance }}</td>
                                     <td>
-                                        <a href="{{ route('view',$user->id) }}">
+                                        <a href="{{ route('backend.users.edit',$user->id) }}">
                                             <button class="btn btn-default">View</button>
                                         </a>
                                         @if($user->status == "active")
