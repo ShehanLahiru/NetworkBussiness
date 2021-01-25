@@ -30,37 +30,39 @@
         </div>
     </div>
     <div class="content"
-        style="background: rgba(206, 157, 157, 0.4); margin-top:90px;margin-left:50px; margin-right:50px">
+        style="margin-top:15px;margin-left:50px; margin-right:50px">
         <div class="row">
             <div class="col-md-4 col-lg-4 mb-4" style="">
-                <button type="button" class=" btn btn-primary btn-lg" data-bs-toggle="modal"
+                <button type="button" class=" btn btn-lg" data-bs-toggle="modal"
                     data-bs-target="#exampleModal" style="display: block;
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: auto;
-                margin-bottom: auto">
+                margin-bottom: auto;
+                background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;">
                     Pay Reload
                 </button>
             </div>
 
             <div class="col-md-4 col-lg-4 mb-4" style="">
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                <button type="button" class="btn btn-lg" data-bs-toggle="modal"
                     data-bs-target="#exampleModal1" style="display: block;
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: auto;
-                margin-bottom: auto">
+                margin-bottom: auto; background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;">
                     Pay Bills
                 </button>
             </div>
 
             <div class="col-md-4 col-lg-4 mb-4" style="">
-                <button type="button" class="btn btn-primary btn-lg " data-bs-toggle="modal"
+                <button type="button" class="btn btn-lg " data-bs-toggle="modal"
                     data-bs-target="#exampleModal2" style="display: block;
                margin-left: auto;
                 margin-right: auto;
                 margin-top: auto;
-                margin-bottom: auto">
+                margin-bottom: auto;
+                background-image: linear-gradient(-179deg, #5CF854 0%, #3EBA1F 100%);border-radius: 10px; font-weight: 1000;">
                     Apply Loan
                 </button>
             </div>

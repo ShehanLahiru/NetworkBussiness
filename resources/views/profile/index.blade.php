@@ -6,6 +6,7 @@
                 <div class="card card-user"style = "box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
                     <div class="image">
                         <img src="images/pro.png" alt="...">
+                        <h5 class="title"style="font-family: cursive;color:black;font-weight: 1000;">{{$user->username}}</h5>
                     </div>
                     <div class="card-body">
                         <form id="profile_update" method="post" action="#"
@@ -114,8 +115,8 @@
             <div class="col-md-8" style="background-color: black">
                 <div class="card">
                     <div class="card-header" style="background:rgba(165, 194, 223); border-radius: 3px; height:70px;border: 3px  white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
-                        <h5 class="title">{{$user->name}}</h5>
-                        <h5 class="title">{{$user->id}}</h5>
+                        <h5 class="title" style=" font-family: cursive;color:black;font-weight: 1000;">{{$user->name}}</h5>
+                        <h5 class="title"style="font-family: cursive;color:black;font-weight: 1000;">{{$user->id}}</h5>
                     </div>
                     <div class="card-body">
                         <div class="site-section" style="background-color: rgba(255,255,255);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
