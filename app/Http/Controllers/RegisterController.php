@@ -27,6 +27,7 @@ class RegisterController extends Controller
         $user->username = $request->input("username");
         $user->name = $request->input("name");
         $user->address = $request->input("address");
+        $user->nic = $request->input("nic");
         $user->contact_no = $request->input("contact_no");
         $user->password = bcrypt($request->input("password"));
         $result = $user->save();
