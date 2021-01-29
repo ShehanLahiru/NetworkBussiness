@@ -20,7 +20,7 @@ background-repeat: no-repeat;">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7">
                                             <div class="form-group">
                                                 <label for="name"style="color: white">{{__("Name")}}</label>
                                                 <input type="text" name="name" class="form-control" value="{{ old('name') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -29,7 +29,7 @@ background-repeat: no-repeat;">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7">
                                             <div class="form-group">
                                                 <label for="username"style="color: white">{{__("Username")}}</label>
                                                 <input type="text" name="username" class="form-control" value="{{ old('username') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -78,7 +78,7 @@ background-repeat: no-repeat;">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7 ">
                                             <div class="form-group">
                                                 <label for="parent_id"style="color: white">{{__("Parent ID")}}</label>
                                                 <input type="text" name="parent_id" class="form-control" value="{{$id}}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)"readonly>
@@ -98,6 +98,7 @@ background-repeat: no-repeat;">
                                 </div>
                             </div>
                             <div class="card-footer ">
+                                <h5 class="title" style=" font-family: cursive;color:white;font-weight: 1000;">Already Registered, Please click <a href="{{ route('backend.login') }}">Here</a> to login</h5>
                                 <button type="submit"
                                     class="btn btn-primary float-right btn-round">{{__('Register')}}</button>
                             </div>

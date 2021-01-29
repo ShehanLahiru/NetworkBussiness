@@ -52,11 +52,12 @@
             <div id = "site-navbar" class="site-navbar">
                 <div class="container fluid">
                     <div class="row align-items-center">
-                        <div class="col-2">
+                        <div class="col-1">
                             <div class="image-logo">
                                 <img width="70px" height="70px" src="images/logo.jpeg" alt="Image">
                             </div>
                         </div>
+                        
                         <div class="col-10">
                             <nav class="site-navigation text-right" role="navigation">
                                 <div class="container">
@@ -70,7 +71,7 @@
                                         <li><a href={{ route('contact-us') }}>Contact Us</a></li>
                                         <li><a href="{{ route('marketing') }}">Marketings</a></li>
                                         @if (Auth::check())
-                                        
+
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
 
                                         <li><a href="{{ route('backend.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">

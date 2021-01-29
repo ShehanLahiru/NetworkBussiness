@@ -5,10 +5,10 @@
 </div>
 <div class="site-section" style="background-image: url(images/main1.jpg);background-size: cover;
 background-repeat: no-repeat;">
-    <div class="container"style="margin-top:0px">
+    <div class="container"style="margin-top:0px;">
         <div class="row">
-            <div class="col-md-12 col-lg-12 mb-12">
-                <div class="card"  style="box-shadow: 3px 6px 15px 0 rgba(0,0,0,.4);background: rgba(0,0,0,.6);border-radius: 40px;border:2px solid #fbc834">
+            <div class="col-md-12 col-lg-12 mb-12;">
+                <div class="card"  style="margin-right:20px;box-shadow: 3px 6px 15px 0 rgba(0,0,0,.4);background: rgba(0,0,0,.6);border-radius: 40px;border:2px solid #fbc834">
                     <div class="card-header">
                         <h4 class="card-title" style="color: white"> Register Here</h4>
                     </div>
@@ -18,9 +18,9 @@ background-repeat: no-repeat;">
                             @csrf
                             @include('backend.alerts.success')
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6"style="margin:auto">
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7 ">
                                             <div class="form-group">
                                                 <label for="name"style="color: white">{{__("Name")}}</label>
                                                 <input type="text" name="name" class="form-control" value="{{ old('name') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -29,7 +29,7 @@ background-repeat: no-repeat;">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7">
                                             <div class="form-group">
                                                 <label for="username"style="color: white">{{__("Username")}}</label>
                                                 <input type="text" name="username" class="form-control" value="{{ old('username') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -78,7 +78,7 @@ background-repeat: no-repeat;">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7 ">
                                             <div class="form-group">
                                                 <label for="parent_id"style="color: white">{{__("Parent ID")}}</label>
                                                 <input type="text" name="parent_id" class="form-control" value="{{ old('parent_id') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -87,7 +87,7 @@ background-repeat: no-repeat;">
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-7 pr-1">
+                                        <div class="col-md-7">
                                             <div class="form-group">
                                                 <label for="nic"style="color: white">{{__("NIC")}}</label>
                                                 <input type="text" name="nic" class="form-control" value="{{ old('nic') }}" style="color: black;font-weight: 800;background: rgba(255,255,255,.4)">
@@ -98,6 +98,7 @@ background-repeat: no-repeat;">
                                 </div>
                             </div>
                             <div class="card-footer ">
+                                <h5 class="title" style=" font-family: cursive;color:white;font-weight: 1000;">Already Registered, Please click <a href="{{ route('backend.login') }}">Here</a> to login</h5>
                                 <button type="submit"
                                     class="btn btn-primary float-right btn-round">{{__('Register')}}</button>
                             </div>
